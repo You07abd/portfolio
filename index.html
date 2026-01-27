@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youssef Abdallah - Developer, Creator, Engineer</title>
+  <meta name="description" content="Youssef Abdallah's portfolio - Engineering student, content creator, and maker from Saudi Arabia.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-logo">YA</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#things">Things</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-avatar">
+          <div class="avatar-placeholder">YA</div>
+        </div>
+        <h1 class="hero-name">Youssef Abdallah</h1>
+        <p class="hero-pronunciation">/yoo-sef ab-dal-lah/</p>
+        <p class="hero-bio">
+          I use code to <strong>build innovative projects</strong>,
+          and tools to <strong>create nerdy things</strong>.
+          Engineering student from Saudi Arabia passionate about
+          <strong>technology, content creation</strong>, and <strong>making ideas come to life</strong>.
+        </p>
+        <div class="hero-links">
+          <a href="https://www.youtube.com/c/Scoobylogic" target="_blank" rel="noopener" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/you07abd" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/maskedmaroons/" target="_blank" rel="noopener" class="social-link" title="Instagram">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="mailto:you07abd@gmail.com" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title">I write code</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3>DIYbuilds4u</h3>
+          <p>Comprehensive online resource guiding users through building a handheld gaming device with step-by-step instructions and videos.</p>
+          <span class="project-tech">Web Development</span>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+            </svg>
+          </div>
+          <h3>Movie Recommender</h3>
+          <p>Movie recommendation system built with Python, integrating data from multiple APIs for personalized suggestions.</p>
+          <span class="project-tech">Python, APIs</span>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9 8h2v8H9zm4 4h2v4h-2z"/>
+            </svg>
+          </div>
+          <h3>Image Processing Tools</h3>
+          <p>Python applications using py-tesseract for OCR text extraction and OpenCV for face detection and image manipulation.</p>
+          <span class="project-tech">Python, OpenCV</span>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+          </div>
+          <h3>Super Mario Pyramids</h3>
+          <p>Terminal-based recreation of the iconic Super Mario World pyramids, demonstrating programming fundamentals.</p>
+          <span class="project-tech">C, Harvard CS50</span>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            </svg>
+          </div>
+          <h3>Chrome Dino Game Clone</h3>
+          <p>Creative recreation of the offline Google Chrome dinosaur game using Scratch, showcasing game development skills.</p>
+          <span class="project-tech">Scratch</span>
+        </article>
+        <article class="project-card">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <h3>Autonomous Flight System</h3>
+          <p>Implementing autonomous flight capabilities for surveillance purposes as part of the UAS2030-KFUPM eVTOL project.</p>
+          <span class="project-tech">Python, Embedded Systems</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="things" class="section section-alt">
+      <h2 class="section-title">I make things</h2>
+      <div class="things-grid">
+        <article class="thing-card featured">
+          <div class="thing-image">
+            <div class="thing-placeholder">
+              <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="thing-content">
+            <h3>Handheld Retro Gaming Device</h3>
+            <p>Built a portable gaming console inspired by the Nintendo Switch using a Raspberry Pi 4, featuring RetroPie emulation, custom 3D-printed case, mini-screen, and battery integration.</p>
+            <a href="blog.html" class="thing-link">Read the build guide &rarr;</a>
+          </div>
+        </article>
+        <article class="thing-card">
+          <div class="thing-image">
+            <div class="thing-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                <path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-9 7.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="thing-content">
+            <h3>eVTOL Aircraft Shell</h3>
+            <p>Designed and manufactured a 3D-printed shell for a lightweight eVTOL aircraft as part of the UAS2030-KFUPM project.</p>
+          </div>
+        </article>
+        <article class="thing-card">
+          <div class="thing-image">
+            <div class="thing-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="thing-content">
+            <h3>Bridge Model</h3>
+            <p>Engineered a bridge model using popsicle sticks to test durability and strength at Oxford Royale summer program.</p>
+          </div>
+        </article>
+        <article class="thing-card">
+          <div class="thing-image">
+            <div class="thing-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="thing-content">
+            <h3>Futuristic City CAD Model</h3>
+            <p>Designed a futuristic city concept using CAD software and Minecraft, showcasing innovative urban planning ideas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <h2 class="section-title">I create content</h2>
+      <div class="content-grid">
+        <article class="content-card">
+          <div class="content-stats">
+            <span class="stat">720+</span>
+            <span class="stat-label">Subscribers</span>
+          </div>
+          <h3>YouTube - Scoobylogic</h3>
+          <p>Creating engaging technology and gaming content since 2018, with over 638,000 total video views. Tutorials, reviews, and gaming content.</p>
+          <a href="https://www.youtube.com/c/Scoobylogic" target="_blank" rel="noopener" class="content-link">Watch on YouTube &rarr;</a>
+        </article>
+        <article class="content-card">
+          <div class="content-stats">
+            <span class="stat">500+</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <h3>Discord Community</h3>
+          <p>Built a thriving Discord community fostering engagement and discussions around technology, gaming, and creative projects.</p>
+        </article>
+        <article class="content-card">
+          <div class="content-stats">
+            <span class="stat">2000+</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <h3>The MUN Times</h3>
+          <p>Led graphic design for the Instagram account, creating engaging social media content that attracted thousands of followers.</p>
+          <a href="https://www.instagram.com/muntimes.sa/" target="_blank" rel="noopener" class="content-link">View on Instagram &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">May 2024 - Present</span>
+            <h3>UAS2030-KFUPM</h3>
+            <p class="timeline-role">Team Lead</p>
+            <p>Leading engineering students in designing a lightweight eVTOL aircraft with autonomous flight capabilities for surveillance.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Aug 2024 - Present</span>
+            <h3>DIYbuilds4u</h3>
+            <p class="timeline-role">Web Developer & Author</p>
+            <p>Developing comprehensive online resources with step-by-step guides for DIY electronics projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Oct 2023 - Present</span>
+            <h3>Misk "Masked Maroons"</h3>
+            <p class="timeline-role">Ambassador, Head of Marketing & Media</p>
+            <p>Leading social media efforts and guiding Grade 10 students into the prestigious Misk Distinct Program.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">July 2024 - Aug 2024</span>
+            <h3>Oxford Royale</h3>
+            <p class="timeline-role">Student</p>
+            <p>Participated in engineering programs at Oxford University, building models and designing futuristic cities.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Sep 2023 - Present</span>
+            <h3>CS50 - Harvard University</h3>
+            <p class="timeline-role">Student</p>
+            <p>Comprehensive computer science course covering C, Python, SQL, algorithms, and data structures.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2021 - July 2021</span>
+            <h3>Python Specialization - University of Michigan</h3>
+            <p class="timeline-role">Student</p>
+            <p>Completed comprehensive Python programming course series including data manipulation and object-oriented programming.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <h3>Orbit International School</h3>
+        <p class="education-location">Dammam, Saudi Arabia | Graduating June 2025</p>
+        <div class="education-stats">
+          <div class="edu-stat">
+            <span class="edu-value">4.0</span>
+            <span class="edu-label">GPA</span>
+          </div>
+          <div class="edu-stat">
+            <span class="edu-value">1420</span>
+            <span class="edu-label">SAT</span>
+          </div>
+          <div class="edu-stat">
+            <span class="edu-value">8.0</span>
+            <span class="edu-label">IELTS</span>
+          </div>
+          <div class="edu-stat">
+            <span class="edu-value">92</span>
+            <span class="edu-label">Qudorat</span>
+          </div>
+        </div>
+        <p class="education-courses"><strong>AP Courses:</strong> Calculus AB, Computer Science A</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python (Advanced)</span>
+            <span class="skill-tag">C (Intermediate)</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Video & Audio</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Adobe Premiere Pro</span>
+            <span class="skill-tag">DaVinci Resolve</span>
+            <span class="skill-tag">After Effects</span>
+            <span class="skill-tag">Audacity</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Design & 3D</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Adobe Photoshop</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">Solidworks</span>
+            <span class="skill-tag">CAD</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">English (Fluent)</span>
+            <span class="skill-tag">Arabic (Proficient)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="section section-alt">
+      <h2 class="section-title">Awards & Recognition</h2>
+      <div class="awards-grid">
+        <div class="award-card">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h4>Honor Roll Recognition</h4>
+          <p>6 consecutive trimesters at Alhussan-Orbit International School</p>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h4>Misk Distinct Program</h4>
+          <p>Selected with only 3% acceptance rate from 15,000+ applicants</p>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h4>Aramco Tomooh Program</h4>
+          <p>Selected for competitive Ivy League-focused leadership program</p>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h4>Taekwondo Awards</h4>
+          <p>"Best Player" certificate and Most Valuable Player of the Month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>Youssef Abdallah &copy; 2025</p>
+      <p class="footer-location">Dhahran, Saudi Arabia</p>
+      <div class="footer-links">
+        <a href="mailto:you07abd@gmail.com">you07abd@gmail.com</a>
+        <span class="footer-divider">|</span>
+        <a href="tel:+966547976570">+966 54 797 6570</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
