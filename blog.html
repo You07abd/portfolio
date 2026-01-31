@@ -1,61 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Youssef Abdallah</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY Handheld Retro Gaming Device - Youssef Abdallah</title>
+  <meta name="description" content="A comprehensive guide to building your own portable retro gaming console using a Raspberry Pi 4.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Youssef Ayman Abdallah</h1>
-            <p>Computer Engineering Student</p>
-        </header>
+  <div class="page-container">
+    <header class="site-header">
+      <a href="index.html" class="site-name">Youssef Abdallah</a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#content">Content</a>
+        <a href="index.html#cv">CV</a>
+      </nav>
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="content.html">Content</a></li>
-                <li><a href="cv.html">CV</a></li>
-            </ul>
+    <main>
+      <header class="blog-header">
+        <h1>DIY Handheld Retro Gaming Device</h1>
+        <p>A comprehensive guide to building your own portable retro gaming console inspired by the Nintendo Switch</p>
+      </header>
+
+      <article class="blog-article">
+        <p class="blog-article-meta">January 2024 – July 2024 · 15 min read</p>
+
+        <nav class="toc">
+          <h2>Table of Contents</h2>
+          <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#components">Components Needed</a></li>
+            <li><a href="#cpu">Choosing the CPU: Raspberry Pi 4</a></li>
+            <li><a href="#screen">Selecting a Screen</a></li>
+            <li><a href="#controls">Gamepad & Controls</a></li>
+            <li><a href="#case">3D Printed Case Design</a></li>
+            <li><a href="#assembly">Step-by-Step Assembly</a></li>
+            <li><a href="#software">Software Setup: RetroPie</a></li>
+            <li><a href="#final">Final Thoughts</a></li>
+          </ol>
         </nav>
 
-        <main>
-            <h2>Blog</h2>
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Ever since I was a kid, I've been fascinated by handheld gaming devices. The Game Boy, PSP, and Nintendo Switch have all been incredible pieces of technology that let you carry your gaming world in your pocket. After getting into the maker community and learning about Raspberry Pi, I decided to build my own portable retro gaming console.</p>
+          <p>This project took about 6 months from initial concept to final build, and it was one of the most rewarding experiences I've had. In this guide, I'll walk you through every step of creating your own handheld retro gaming device.</p>
 
-            <p class="intro">
-                Thoughts on engineering, technology, and building things.
-            </p>
+          <div class="info-box">
+            <strong>What you'll learn:</strong> By the end of this guide, you'll understand how to select components, design a custom case, wire everything together, and set up the software to play thousands of retro games.
+          </div>
+        </section>
 
-            <div class="blog-post">
-                <h3><a href="#">Coming Soon</a></h3>
-                <p class="date">January 2026</p>
-                <p class="excerpt">
-                    Blog posts will appear here. Topics will include embedded systems,
-                    project updates, tutorials, and reflections on engineering and technology.
-                </p>
+        <section id="components">
+          <h2>Components Needed</h2>
+          <p>Before diving into the build, let's go over all the components you'll need. I've tested various options and these are my recommendations:</p>
+
+          <div class="components-list">
+            <div class="component-item">
+              <h4>Raspberry Pi 4 (4GB or 8GB)</h4>
+              <p>The brain of our device. The Pi 4 offers excellent performance for emulation, capable of running N64, PSP, and even some Dreamcast games smoothly.</p>
+            </div>
+            <div class="component-item">
+              <h4>5-inch IPS Display (800x480)</h4>
+              <p>A crisp, colorful display that connects via HDMI. The IPS panel ensures good viewing angles for comfortable gaming.</p>
+            </div>
+            <div class="component-item">
+              <h4>Battery Pack (10000mAh)</h4>
+              <p>Provides 4-6 hours of gameplay. Make sure it supports 5V/3A output for stable power delivery to the Pi 4.</p>
+            </div>
+            <div class="component-item">
+              <h4>USB Gamepad Controller</h4>
+              <p>I used a wired USB controller and harvested its PCB for the buttons. Alternatively, you can use individual tactile switches.</p>
+            </div>
+            <div class="component-item">
+              <h4>3D Printed Case</h4>
+              <p>Custom designed in CAD software to house all components. I used Solidworks for the design and printed in PLA.</p>
+            </div>
+            <div class="component-item">
+              <h4>Miscellaneous</h4>
+              <p>Micro SD card (32GB+), mini HDMI adapter, USB-C cable, heat sinks, small cooling fan, screws, and wires.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="cpu">
+          <h2>Choosing the CPU: Raspberry Pi 4</h2>
+          <p>The Raspberry Pi 4 was an obvious choice for this project. Here's why:</p>
+          <ul>
+            <li><strong>Processing Power:</strong> The quad-core Cortex-A72 processor handles most retro game emulation with ease</li>
+            <li><strong>RAM Options:</strong> 4GB or 8GB variants give you headroom for more demanding emulators</li>
+            <li><strong>USB 3.0:</strong> Fast data transfer for ROMs stored on external drives</li>
+            <li><strong>Built-in WiFi:</strong> Easy to transfer files and update the system wirelessly</li>
+            <li><strong>Community Support:</strong> Extensive documentation and active community for troubleshooting</li>
+          </ul>
+
+          <div class="warning-box">
+            <strong>Important:</strong> The Raspberry Pi 4 runs hot, especially during gaming. You'll need proper cooling — I recommend a combination of heat sinks and a small 5V fan.
+          </div>
+
+          <p>I went with the 4GB model as it provides the best balance of performance and power consumption for a portable device.</p>
+        </section>
+
+        <section id="screen">
+          <h2>Selecting a Screen</h2>
+          <p>The display is one of the most important components as it directly affects your gaming experience. After testing several options, I settled on a 5-inch IPS display.</p>
+
+          <h3>Key Considerations</h3>
+          <ul>
+            <li><strong>Size:</strong> 5 inches offers a good balance between portability and visibility</li>
+            <li><strong>Resolution:</strong> 800x480 is perfect for retro games which run at low resolutions</li>
+            <li><strong>Panel Type:</strong> IPS provides better colors and viewing angles than TN panels</li>
+            <li><strong>Connection:</strong> HDMI connection ensures the best compatibility</li>
+            <li><strong>Touchscreen:</strong> Optional, but useful for navigation (I didn't include it to save battery)</li>
+          </ul>
+
+          <p>The display connects directly to the Pi's mini-HDMI port. You'll need a mini-HDMI to HDMI adapter and then connect to the display's HDMI input.</p>
+        </section>
+
+        <section id="controls">
+          <h2>Gamepad & Controls</h2>
+          <p>For controls, I harvested the PCB from a cheap USB gamepad and connected it to the Raspberry Pi's GPIO pins. This gave me:</p>
+
+          <ul>
+            <li>D-Pad (Up, Down, Left, Right)</li>
+            <li>4 Face Buttons (A, B, X, Y)</li>
+            <li>2 Shoulder Buttons (L, R)</li>
+            <li>Start and Select buttons</li>
+            <li>2 Analog sticks (optional, but great for N64 games)</li>
+          </ul>
+
+          <h3>Wiring the Controls</h3>
+          <p>The GPIO pins on the Raspberry Pi can be configured as input buttons. I used the built-in pull-up resistors and connected each button between its GPIO pin and ground. RetroPie's built-in controller configuration makes it easy to map these buttons.</p>
+
+          <div class="info-box">
+            <strong>Tip:</strong> Test your button wiring before final assembly. Use the <code>gpio readall</code> command to verify each button is being detected correctly.
+          </div>
+        </section>
+
+        <section id="case">
+          <h2>3D Printed Case Design</h2>
+          <p>Designing the case was the most time-consuming part of the project, but also the most creative. I used Solidworks for the CAD design, though Blender or Fusion 360 would work just as well.</p>
+
+          <h3>Design Considerations</h3>
+          <ul>
+            <li><strong>Ergonomics:</strong> Comfortable grip angles based on Nintendo Switch design</li>
+            <li><strong>Ventilation:</strong> Air vents for the cooling fan and heat dissipation</li>
+            <li><strong>Access:</strong> Cutouts for USB ports, SD card slot, and charging port</li>
+            <li><strong>Button Placement:</strong> Natural thumb positioning for extended play sessions</li>
+            <li><strong>Assembly:</strong> Snap-fit design with screw reinforcement for durability</li>
+          </ul>
+
+          <p>The case was printed in black PLA with 20% infill. Total print time was about 12 hours for both halves. I recommend printing with supports for the button holes and display cutout.</p>
+        </section>
+
+        <section id="assembly">
+          <h2>Step-by-Step Assembly</h2>
+          <p>Now for the fun part — putting it all together! Follow these steps carefully:</p>
+
+          <div class="steps-container">
+            <div class="step">
+              <h3>Prepare the Raspberry Pi</h3>
+              <p>Install heat sinks on the CPU and RAM chips. Attach the cooling fan to the GPIO pins (5V and GND). Flash the micro SD card with RetroPie using Raspberry Pi Imager.</p>
             </div>
 
-            <!--
-            Template for future blog posts:
-
-            <div class="blog-post">
-                <h3><a href="posts/post-title.html">Post Title Here</a></h3>
-                <p class="date">Month Year</p>
-                <p class="excerpt">
-                    Brief description of the post content...
-                </p>
+            <div class="step">
+              <h3>Mount the Display</h3>
+              <p>Fit the display into the front half of the case. Use hot glue or mounting tape to secure it in place. Route the HDMI and power cables through the internal channels.</p>
             </div>
-            -->
 
-        </main>
+            <div class="step">
+              <h3>Install the Controls</h3>
+              <p>Mount the gamepad PCB in position. Ensure buttons align with the holes in the case. Test each button for proper actuation before proceeding.</p>
+            </div>
 
-        <footer>
-            <p>Youssef Abdallah</p>
-        </footer>
-    </div>
+            <div class="step">
+              <h3>Position the Raspberry Pi</h3>
+              <p>Mount the Pi using standoffs or mounting posts built into the case. Connect the display's HDMI cable to the Pi's mini-HDMI port.</p>
+            </div>
+
+            <div class="step">
+              <h3>Wire the Power System</h3>
+              <p>Position the battery pack and connect it to the Pi via USB-C. Add a power switch inline for easy on/off control. Ensure all connections are secure and properly insulated.</p>
+            </div>
+
+            <div class="step">
+              <h3>Final Assembly</h3>
+              <p>Carefully close the case halves, ensuring no wires are pinched. Secure with screws. Do a full power-on test before celebrating!</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="software">
+          <h2>Software Setup: RetroPie</h2>
+          <p>RetroPie is the perfect software for this project. It's a free, open-source distribution that turns your Raspberry Pi into a retro gaming machine.</p>
+
+          <h3>Installation Steps</h3>
+          <ol>
+            <li>Download the RetroPie image from <a href="https://retropie.org.uk/" target="_blank" rel="noopener">retropie.org.uk</a></li>
+            <li>Flash the image to your micro SD card using Raspberry Pi Imager</li>
+            <li>Insert the SD card and boot up your device</li>
+            <li>Configure your controls using the on-screen prompts</li>
+            <li>Transfer your legally obtained ROM files via USB or WiFi</li>
+          </ol>
+
+          <h3>Recommended Emulators</h3>
+          <ul>
+            <li><strong>RetroArch:</strong> Multi-system emulator for NES, SNES, Genesis, Game Boy, and more</li>
+            <li><strong>Mupen64Plus:</strong> N64 emulator with good compatibility</li>
+            <li><strong>PPSSPP:</strong> PSP emulator for portable PlayStation games</li>
+            <li><strong>Dolphin:</strong> GameCube emulator (limited on Pi 4, but some games work)</li>
+          </ul>
+
+          <div class="info-box">
+            <strong>Legal Note:</strong> Only use ROMs for games you legally own. Many classic games are available through legitimate retro gaming stores and services.
+          </div>
+        </section>
+
+        <section id="final">
+          <h2>Final Thoughts</h2>
+          <p>Building this handheld gaming device was an incredible learning experience. I gained hands-on knowledge in:</p>
+
+          <ul>
+            <li>CAD design and 3D printing</li>
+            <li>Basic electronics and GPIO programming</li>
+            <li>Linux system administration</li>
+            <li>Project planning and execution</li>
+          </ul>
+
+          <p>The best part? I now have a completely custom gaming device that I built with my own hands. Every time I pick it up to play some classic games, I feel a sense of pride in what I've created.</p>
+
+          <p>If you're thinking about building your own, I highly encourage you to give it a try. Start simple, learn from mistakes, and don't be afraid to iterate on your design. The maker community is incredibly supportive, and there are countless resources available to help you along the way.</p>
+
+          <div class="info-box">
+            <strong>Want to build your own?</strong> Check out my YouTube channel <a href="https://www.youtube.com/c/Scoobylogic" target="_blank" rel="noopener">Scoobylogic</a> for video tutorials and more DIY projects.
+          </div>
+
+          <p>Happy building!</p>
+          <p><em>— Youssef Abdallah</em></p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Youssef Abdallah © 2025</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
