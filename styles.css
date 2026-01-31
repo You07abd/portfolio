@@ -399,6 +399,37 @@ body {
 }
 
 /*
+ * CV PAGE
+ */
+.cv-page {
+  padding: var(--space-xl) 0;
+}
+
+.cv-page-header {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-page-header h1 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+@media (min-width: 48rem) {
+  .cv-page-header h1 {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.cv-page-header p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/*
  * CV SECTION
  */
 .cv-group {
