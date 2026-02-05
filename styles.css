@@ -75,68 +75,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hero Section */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-name {
-    font-size: 64px;
-    font-weight: normal;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    color: #666666;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-.hero-description {
-    font-size: 22px;
-    line-height: 1.6;
-    color: #888888;
-    margin-bottom: 40px;
-    max-width: 600px;
-}
-
-.hero-description strong {
-    color: #111111;
-    font-weight: bold;
-}
-
-.hero-links {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.hero-links a {
-    color: #111111;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.hero-links a:hover {
-    text-decoration: underline;
-}
-
-/* Container */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 60px 20px;
+/*
+ * PAGE CONTAINER
+ * ==============
+ * This creates the centered content column with proper whitespace.
+ * The max-width + auto margins centers the content.
+ * Padding provides breathing room on smaller screens.
+ */
+.page-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 @media (min-width: 48rem) { /* 768px */
@@ -805,31 +754,14 @@ a:focus-visible {
   margin-top: 0;
 }
 
-@media (max-width: 700px) {
-    .hero {
-        min-height: 80vh;
-        padding: 40px 20px;
-    }
-
-    .hero-name {
-        font-size: 40px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-description {
-        font-size: 18px;
-    }
-
-    .hero-links {
-        gap: 25px;
-    }
-
-    .container {
-        padding: 40px 20px;
-    }
+/* Code blocks */
+.blog-article pre {
+  background-color: color-mix(in srgb, var(--color-border) 50%, transparent);
+  padding: var(--space-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+  border-radius: 4px;
+}
 
 .blog-article code {
   font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
