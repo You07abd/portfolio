@@ -11,62 +11,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page-container">
-    <header class="site-header">
-      <a href="/" class="site-name">Youssef Abdallah</a>
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#content">Content</a>
-        <a href="cv.html">CV</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero / Home -->
-      <section class="hero" aria-label="Introduction">
-        <h1>Youssef Abdallah</h1>
-        <p class="hero-subtitle">Engineering student from Saudi Arabia</p>
-        <p class="hero-description">
-          I use code to <strong>build innovative projects</strong>, and tools to <strong>create nerdy things</strong>.
-          Passionate about technology, content creation, and making ideas come to life.
+    <div class="hero">
+        <h1 class="hero-name fade-scroll">Youssef Abdallah</h1>
+        <p class="hero-subtitle fade-scroll">Engineering student from Saudi Arabia</p>
+        <p class="hero-description fade-scroll">
+            I use code to <strong>build innovative projects</strong>, and tools to <strong>create nerdy things</strong>. Passionate about technology, content creation, and making ideas come to life.
         </p>
-        <div class="social-links">
-          <a href="https://www.youtube.com/c/Scoobylogic" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://github.com/you07abd" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.instagram.com/maskedmaroons/" target="_blank" rel="noopener">Instagram</a>
-          <a href="mailto:you07abd@gmail.com">Email</a>
+        <div class="hero-links fade-scroll">
+            <a href="https://www.youtube.com/c/Scoobylogic" target="_blank">YouTube</a>
+            <a href="https://github.com/You07abd" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/maskedmaroons/" target="_blank">Instagram</a>
+            <a href="mailto:you07abd@gmail.com">Email</a>
         </div>
-      </section>
+    </div>
 
-      <!-- Currently -->
-      <section class="section" aria-labelledby="currently-heading">
-        <h2 id="currently-heading" class="section-heading">Currently</h2>
-        <ul class="currently-list">
-          <li>
-            <strong>Team Lead</strong> at UAS2030-KFUPM — Leading the design and development of a lightweight eVTOL aircraft with autonomous flight capabilities.
-          </li>
-          <li>
-            <strong>Web Developer & Author</strong> at DIYbuilds4u — Creating comprehensive guides for building handheld gaming devices.
-          </li>
-          <li>
-            <strong>Ambassador</strong> at Misk "Masked Maroons" — Guiding students into the prestigious Misk Distinct Program.
-          </li>
-          <li>
-            <strong>Student</strong> at CS50 (Harvard) — Learning computer science fundamentals, algorithms, and web development.
-          </li>
-        </ul>
-      </section>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="content.html">Content</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
 
-      <!-- Projects -->
-      <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
-        <div class="projects-header">
-          <span class="projects-label">I write</span>
-          <h2 id="projects-heading" class="projects-title">Code</h2>
-        </div>
-        <p class="projects-description">
-          Whether it's exploring new technologies, building useful tools, or creating fun experiments, I love turning ideas into working projects.
-        </p>
+        <main>
+            <section class="section">
+                <h2>Currently</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">UAS2030-KFUPM</span>
+                        <span class="item-date">May 2024 - Current</span>
+                    </div>
+                    <p class="item-role">Team Lead - Autonomous lightweight eVTOL aircraft</p>
+                    <p class="item-description">
+                        Leading a team of engineering students in the design and development
+                        of a lightweight eVTOL aircraft with a 3D-printed shell and autonomous
+                        flight system for surveillance purposes.
+                    </p>
+                </div>
 
         <div class="projects-carousel">
           <div class="projects-track">
@@ -120,53 +104,52 @@
         </div>
       </section>
 
-      <!-- Blog -->
-      <section id="blog" class="section" aria-labelledby="blog-heading">
-        <h2 id="blog-heading" class="section-heading">Blog</h2>
-        <ul class="blog-list">
-          <li>
-            <a href="blog.html">DIY Handheld Retro Gaming Device</a>
-            <span class="blog-meta">— A comprehensive guide to building your own portable retro gaming console</span>
-          </li>
-        </ul>
-      </section>
+        <footer>
+            <p>Youssef Abdallah</p>
+        </footer>
+    </div>
 
-      <!-- Content -->
-      <section id="content" class="section" aria-labelledby="content-heading">
-        <h2 id="content-heading" class="section-heading">Content</h2>
-        <ul class="content-list">
-          <li>
-            <a href="https://www.youtube.com/c/Scoobylogic" target="_blank" rel="noopener">YouTube — Scoobylogic</a>
-            <span class="content-stats">720+ subscribers · 638,000+ views</span>
-            <p class="content-desc">Technology and gaming content since 2018. Tutorials, reviews, and gaming videos.</p>
-          </li>
-          <li>
-            <a href="#">Discord Community</a>
-            <span class="content-stats">500+ members</span>
-            <p class="content-desc">Community for technology, gaming, and creative projects.</p>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/youssef-abdallah-757a652b3" target="_blank" rel="noopener">LinkedIn</a>
-            <p class="content-desc">Connect with me professionally.</p>
-          </li>
-        </ul>
-      </section>
+    <script>
+        // Text fade on scroll effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-scroll');
 
-      <!-- Contact -->
-      <section class="section contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="section-heading">Contact</h2>
-        <p>
-          <a href="mailto:you07abd@gmail.com">you07abd@gmail.com</a><br>
-          <span class="contact-location">Dhahran, Saudi Arabia</span>
-        </p>
-      </section>
-    </main>
+            // Initial state - elements start slightly faded
+            fadeElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                el.style.transitionDelay = (index * 0.15) + 's';
+            });
 
-    <footer class="site-footer">
-      <p>Youssef Abdallah © 2025</p>
-    </footer>
-  </div>
+            // Trigger animation after small delay
+            setTimeout(() => {
+                fadeElements.forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            }, 100);
 
-  <script src="script.js"></script>
+            // Fade out on scroll
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset;
+                const heroHeight = document.querySelector('.hero').offsetHeight;
+
+                fadeElements.forEach(el => {
+                    const fadeStart = 50;
+                    const fadeEnd = heroHeight * 0.7;
+
+                    if (scrollTop <= fadeStart) {
+                        el.style.opacity = '1';
+                    } else if (scrollTop >= fadeEnd) {
+                        el.style.opacity = '0';
+                    } else {
+                        const opacity = 1 - ((scrollTop - fadeStart) / (fadeEnd - fadeStart));
+                        el.style.opacity = Math.max(0, Math.min(1, opacity));
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
