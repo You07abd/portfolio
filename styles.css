@@ -73,6 +73,7 @@ body {
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /*
@@ -153,10 +154,43 @@ body {
 /*
  * HERO SECTION
  * ============
+ * Full-bleed background image with dark overlay.
+ * Breaks out of .page-container using negative margins + viewport width.
  */
 .hero {
-  padding: var(--space-3xl) 0 var(--space-2xl);
+  position: relative;
+  /* Full-bleed: break out of the centered .page-container */
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  padding: var(--space-3xl) var(--container-padding) var(--space-2xl);
   text-align: center;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: var(--space-3xl) var(--container-padding-lg) var(--space-2xl);
+  }
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Keep all hero content above the overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -165,6 +199,7 @@ body {
   font-weight: 700;
   line-height: var(--line-height-tight);
   margin-bottom: var(--space-xs);
+  color: #ffffff;
 }
 
 @media (min-width: 48rem) {
@@ -175,19 +210,19 @@ body {
 
 .hero-subtitle {
   font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: var(--space-md);
 }
 
 .hero-description {
   font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 540px;
   margin: 0 auto var(--space-md);
 }
 
 .hero-description strong {
-  color: var(--color-text);
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -200,12 +235,13 @@ body {
 
 .social-links a {
   font-size: var(--font-size-xs);
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
+  transition: color var(--transition);
 }
 
 .social-links a:hover {
-  color: var(--color-text-secondary);
+  color: #ffffff;
   text-decoration: underline;
 }
 
